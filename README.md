@@ -28,7 +28,7 @@ A beautiful, feature-rich task management application with dark mode, task prior
 - 👤 **Custom Profile**: Personalize with your name and email
 - 💾 **Auto-save**: All data persists in browser localStorage
 - 🎭 **Smooth Animations**: Delightful micro-interactions throughout
-- ♿ **Accessible**: ARIA labels and keyboard navigation supportq
+- ♿ **Accessible**: ARIA labels and keyboard navigation support
 
 ## 🚀 Getting Started
 
@@ -104,7 +104,33 @@ A beautiful, feature-rich task management application with dark mode, task prior
 - **Enter**: Add a new task
 - **Escape**: Cancel editing
 
-## 🛠️ Technology Stack
+## � Screenshots
+
+### Light Mode
+
+````carousel
+![Light Mode - Empty State](screenshots/light_mode_empty.png)
+_Clean, modern interface in light mode_
+
+<!-- slide -->
+
+![Light Mode - With Tasks](screenshots/light_mode_tasks.png)
+_Task management with priorities and categories in light mode_
+````
+
+### Dark Mode
+
+````carousel
+![Dark Mode - Empty State](screenshots/dark_mode_empty.png)
+_Beautiful dark theme with glassmorphism effects_
+
+<!-- slide -->
+
+![Dark Mode - With Tasks](screenshots/dark_mode_tasks.png)
+_Tasks organized by category in stunning dark mode_
+````
+
+## �🛠️ Technology Stack
 
 - **HTML5**: Semantic markup with accessibility features
 - **CSS3**: Modern styling with CSS custom properties, flexbox, and animations
