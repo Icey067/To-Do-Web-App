@@ -30,26 +30,6 @@ A beautiful, feature-rich task management application with dark mode, task prior
 - 🎭 **Smooth Animations**: Delightful micro-interactions throughout
 - ♿ **Accessible**: ARIA labels and keyboard navigation support
 
-## 📸 Screenshots
-
-![Screenshot 1](screenshots/Screenshot_2.png)
-*Modern interface showing tasks for "My Day" with dark mode enabled.*
-
-![Screenshot 2](screenshots/Screenshot_1.png)
-*Task view for "Current Week" showing priority badges and categories.*
-
-![Screenshot 3](screenshots/Screenshot_3.png)
-*Monthly task overview with task statistics.*
-
-![Screenshot 4](screenshots/Screenshot_4.png)
-*Confirmation dialogs with modern styling.*
-
-![Screenshot 5](screenshots/Screenshot_5.png)
-*Search functionality in action.*
-
-![Screenshot 6](screenshots/Screenshot_6.png)
-*Mobile responsive design.*
-
 ## 🚀 Getting Started
 
 ### Prerequisites
