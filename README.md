@@ -178,9 +178,9 @@ This project is open source and available for personal and commercial use.
 ## 📧 Contact
 
 For questions, suggestions, or feedback:
-- **Developer**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: your-github-username
+- **Developer**: Aaditya (Icey)
+- **Email**: flameluffy69@gmail.com
+- **GitHub**: Icey067
 
 ---
 
