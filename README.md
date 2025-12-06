@@ -28,7 +28,7 @@ A beautiful, feature-rich task management application with dark mode, task prior
 - 👤 **Custom Profile**: Personalize with your name and email
 - 💾 **Auto-save**: All data persists in browser localStorage
 - 🎭 **Smooth Animations**: Delightful micro-interactions throughout
-- ♿ **Accessible**: ARIA labels and keyboard navigation support
+- ♿ **Accessible**: ARIA labels and keyboard navigation supportq
 
 ## 🚀 Getting Started
 
