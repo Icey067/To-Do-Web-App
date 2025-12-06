@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO and Social Meta Tags -->
+    <meta name="description"
+        content="A modern, feature-rich to-do list application with dark mode, task priorities, categories, and more. Stay organized and productive with this beautiful task manager.">
+    <meta name="keywords" content="todo, task manager, productivity, to-do list, task organizer">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Modern To-Do List App">
+    <meta property="og:description"
+        content="Stay organized with this beautiful, feature-rich task management application">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/ico.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Modern To-Do List</title>
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="overlay" role="status" aria-label="Loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Application Container -->
+    <main class="home">
+        <div class="container-main">
+
+            <!-- Left Sidebar -->
+            <aside class="container-left" id="containerLeft" role="complementary">
+
+                <!-- Profile Section -->
+                <div class="profile center top">
+                    <img src="img/profile.png" alt="User Profile Picture" id="profileImg">
+                    <div>
+                        <p class="name" id="name">Loading...</p>
+                        <p class="email" id="email">Loading...</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="menu center" role="navigation" aria-label="Main navigation">
+                    <div class="search-holder">
+                        <input type="search" name="search" id="search" placeholder="Search tasks..."
+                            aria-label="Search tasks">
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li id="o1">
+                                <a href="#" aria-label="View today's tasks">
+                                    <i class='bx bx-sun' id="i1"></i>
+                                    <span>My day</span>
+                                </a>
+                            </li>
+                            <li id="o2">
+                                <a href="#" aria-label="View this week's tasks">
+                                    <i class='bx bx-grid' id="i2"></i>
+                                    <span>This week</span>
+                                </a>
+                            </li>
+                            <li id="o3">
+                                <a href="#" aria-label="View this month's tasks">
+                                    <i class='bx bx-calendar-event' id="i3"></i>
+                                    <span>This month</span>
+                                </a>
+                            </li>
+                            <li id="o4">
+                                <a href="#" aria-label="View all tasks">
+                                    <i class='bx bx-extension' id="i4"></i>
+                                    <span>All tasks</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Bottom Actions -->
+                <div class="bottom-actions">
+                    <!-- Dark Mode Toggle -->
+                    <div class="dark-mode-toggle center">
+                        <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                            <i class='bx bx-moon'></i>
+                            <span>Dark Mode</span>
+                        </button>
+                    </div>
+
+                    <!-- Logout -->
+                    <div class="logout center">
+                        <hr>
+                        <a href="#" id="logoutLink" aria-label="Logout">
+                            <i class='bx bx-log-out'></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Right Main Content -->
+            <section class="container-right">
+
+                <!-- Hamburger Menu for Mobile -->
+                <div class="hamburger-container">
+                    <button class="burger" id="burgerIcon" aria-label="Toggle menu" aria-expanded="false">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </button>
+                </div>
+
+                <div class="container-sub center">
+
+                    <!-- Header with Title and Actions -->
+                    <header class="header">
+                        <h1 id="header_title">My Day</h1>
+                        <div class="header-actions">
+                            <!-- Task Statistics -->
+                            <div class="task-stats" id="taskStats" title="Task completion">
+                                <span id="completedCount">0</span>/<span id="totalCount">0</span>
+                            </div>
+
+                            <!-- Export/Import Buttons -->
+                            <button class="action-btn" id="exportBtn" aria-label="Export tasks" title="Export tasks">
+                                <i class='bx bx-download'></i>
+                            </button>
+                            <button class="action-btn" id="importBtn" aria-label="Import tasks" title="Import tasks">
+                                <i class='bx bx-upload'></i>
+                            </button>
+
+                            <!-- Delete All Button -->
+                            <button class="action-btn" id="deleteAllBtn" aria-label="Delete all tasks"
+                                title="Delete all tasks">
+                                <i class='bx bx-trash'></i>
+                            </button>
+                        </div>
+                    </header>
+
+                    <!-- Tasks Container -->
+                    <div class="card-holder" id="TaskContainer" role="list" aria-label="Tasks list">
+                        <!-- Tasks will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Add New Task Section -->
+                    <div class="add-new">
+                        <div class="card-new align">
+                            <form id="taskForm" class="task-form">
+                                <div class="group1">
+                                    <div class="task-input-wrapper">
+                                        <i class='bx bx-plus'></i>
+                                        <input type="text" name="todo" id="todo" placeholder="Add a task"
+                                            aria-label="Task description" required autocomplete="off">
+                                    </div>
+                                    <div class="task-meta">
+                                        <!-- Date Input -->
+                                        <input type="date" name="date" id="duedate" aria-label="Due date" required>
+
+                                        <!-- Priority Selector -->
+                                        <select id="priority" name="priority" aria-label="Task priority"
+                                            title="Set priority">
+                                            <option value="low">Low</option>
+                                            <option value="medium" selected>Medium</option>
+                                            <option value="high">High</option>
+                                        </select>
+
+                                        <!-- Category Input -->
+                                        <input type="text" id="category" name="category" placeholder="Category"
+                                            aria-label="Task category" list="categoryList" autocomplete="off">
+                                        <datalist id="categoryList">
+                                            <!-- Categories will be populated dynamically -->
+                                        </datalist>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Hidden file input for import -->
+    <input type="file" id="fileInput" accept="application/json" style="display: none;" aria-hidden="true">
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        // Hide loading overlay when page loads
+        window.addEventListener('load', function () {
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
