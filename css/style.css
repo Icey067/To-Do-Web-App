@@ -13,28 +13,28 @@
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-    
+
     /* Accent Colors - Vibrant HSL */
     --accent-primary: hsl(220, 85%, 60%);
     --accent-secondary: hsl(280, 75%, 65%);
     --accent-success: hsl(142, 71%, 45%);
     --accent-warning: hsl(38, 92%, 50%);
     --accent-danger: hsl(0, 84%, 60%);
-    
+
     /* Priority Colors */
     --priority-high: hsl(0, 84%, 60%);
     --priority-medium: hsl(38, 92%, 50%);
     --priority-low: hsl(195, 85%, 60%);
-    
+
     /* Gradient */
     --gradient-primary: linear-gradient(135deg, hsl(220, 85%, 60%) 0%, hsl(280, 75%, 65%) 100%);
     --gradient-overlay: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-    
+
     /* Border Radius */
     --radius-sm: 6px;
     --radius-md: 12px;
@@ -68,7 +68,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -130,8 +131,13 @@ body {
 }
 
 @keyframes rotationBack {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 /* ==================== MAIN CONTAINER ==================== */
@@ -143,7 +149,7 @@ body {
     align-items: center;
     padding: 1rem;
     background: var(--bg-primary);
-    background-image: 
+    background-image:
         radial-gradient(at 20% 30%, hsla(220, 85%, 60%, 0.15) 0px, transparent 50%),
         radial-gradient(at 80% 70%, hsla(280, 75%, 65%, 0.15) 0px, transparent 50%);
 }
@@ -298,10 +304,21 @@ body.dark-mode .container-left {
     font-size: 18px;
 }
 
-#i1 { color: hsl(280, 75%, 65%); }
-#i2 { color: hsl(142, 71%, 45%); }
-#i3 { color: hsl(38, 92%, 50%); }
-#i4 { color: hsl(220, 85%, 60%); }
+#i1 {
+    color: hsl(280, 75%, 65%);
+}
+
+#i2 {
+    color: hsl(142, 71%, 45%);
+}
+
+#i3 {
+    color: hsl(38, 92%, 50%);
+}
+
+#i4 {
+    color: hsl(220, 85%, 60%);
+}
 
 /* ==================== BOTTOM ACTIONS ==================== */
 .bottom-actions {
@@ -533,7 +550,9 @@ body.dark-mode .container-left {
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 .card input[type=checkbox] {
@@ -681,10 +700,11 @@ body.dark-mode .container-left {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    min-height: 50px;
 }
 
 .task-input-wrapper i {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--accent-primary);
 }
 
@@ -692,13 +712,15 @@ body.dark-mode .container-left {
     flex: 1;
     background: transparent;
     border: none;
-    font-size: 15px;
+    font-size: 18px;
     color: var(--text-primary);
     outline: none;
+    padding: 0.5rem 0;
 }
 
 .task-input-wrapper input[type=text]::placeholder {
     color: var(--text-muted);
+    font-size: 18px;
 }
 
 .task-meta {
@@ -755,7 +777,7 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
     .container-main {
         width: 95%;
     }
-    
+
     .container-left {
         width: 260px;
     }
@@ -767,13 +789,13 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
         display: block;
         padding: 1rem;
     }
-    
+
     .container-main {
         width: 100%;
         height: 100vh;
         border-radius: 0;
     }
-    
+
     .container-left {
         position: fixed;
         left: -100%;
@@ -784,41 +806,41 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
         box-shadow: var(--shadow-lg);
         transition: left var(--transition-normal);
     }
-    
+
     .container-left.v-class {
         left: 0;
     }
-    
+
     .container-right {
         width: 100%;
     }
-    
+
     .container-sub {
         padding: 1rem;
     }
-    
+
     .header h1 {
         font-size: 24px;
     }
-    
+
     .header-actions {
         gap: 0.5rem;
     }
-    
+
     .task-stats {
         font-size: 11px;
         padding: 0.4rem 0.75rem;
     }
-    
+
     .action-btn {
         width: 36px;
         height: 36px;
     }
-    
+
     .task-meta {
         flex-direction: column;
     }
-    
+
     .task-meta input,
     .task-meta select {
         width: 100%;
@@ -829,13 +851,13 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
     .home {
         padding: 0;
     }
-    
+
     .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .header-actions {
         width: 100%;
         justify-content: space-between;
@@ -848,6 +870,7 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -855,9 +878,12 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -865,6 +891,7 @@ body.dark-mode .task-meta input[type=date]::-moz-calendar-picker-indicator {
 
 /* ==================== ACCESSIBILITY ==================== */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
