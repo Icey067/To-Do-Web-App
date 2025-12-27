@@ -4,7 +4,7 @@
 
 A beautiful, feature-rich task management application with dark mode, task priorities, categories, and more. Stay organized and productive with this modern to-do list!
 
-## 🌟 Features
+## 🌟 Features 
 
 ### Core Functionality
 - ✅ **Task Management**: Add, edit, delete, and mark tasks as complete
